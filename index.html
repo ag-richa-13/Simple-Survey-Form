@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Survey Form</h1>
+    </div>
+    <form id="survey-form">
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" class="input form-control" id="first-name" required />
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" class="input form-control" id="last-name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="input form-control" id="email" required />
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" class="input form-control" id="mobile" required />
+      </div>
+      <div class="form-group">
+        <label for="profession">Profession</label>
+        <input type="text" class="form-control input" id="profession" required />
+      </div>
+
+      <div class="form-group">
+        <label for="date-of-birth">Date of Birth</label>
+        <input type="date" class="input form-control" id="date-of-birth" required />
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" class="input form-control">
+          <option value="">
+            Select a country
+          </option>
+          <option value="India" required>India</option>
+          <option value="USA" required>USA</option>
+          <option value="UK" required>UK</option>
+          <!-- Add more countries here -->
+        </select>
+      </div>
+      <div class="form-group gender">
+        <label for="gender">Gender</label>
+        <div class="gender-group">
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="male" name="gender" value="Male" checked required />
+            <label class="gender-label form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="female" name="gender" value="Female" required />
+            <label class="gender-label form-check-label" for="female">Female</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="other" name="gender" value="Other" required />
+            <label class="gender-label form-check-label" for="other">Other</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button type="button" class="btn btn-primary" id="submit-button">
+          Submit
+        </button>
+        <button type="button" class="btn btn-primary" id="reset-button">
+          Reset
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div id="popup">
+    <div class="popup-content">
+      <div class="popup-close">
+        <button id="close-popup" class="close-btn">X</button>
+      </div>
+      <h2>Survey Submission Details</h2>
+      <div id="submission-details"></div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
